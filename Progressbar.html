@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+  var i = 0;
+  var i = 0;
+  var i = 0;
+  var i = 0;
+  var i = 0;
+function btnfinish() {
+  if (i == 0) {
+    i = 50;
+    var width = 50;
+
+
+    var elem1 = document.getElementById("greenpb");
+    var elem2 = document.getElementById("redpb");
+    var elem3 = document.getElementById("whitepb");
+    var elem4 = document.getElementById("bluepb");
+    var elem5 = document.getElementById("yellowpb");
+    var id1 = setInterval(frame, 100);
+    var id2 = setInterval(frame, 100);
+    var id3 = setInterval(frame, 100);
+    var id4 = setInterval(frame, 100);
+    var id5 = setInterval(frame, 100);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id1);
+        clearInterval(id2);
+        clearInterval(id3);
+        clearInterval(id4);
+        clearInterval(id5);
+        i = 0;
+      } else {
+        width++;
+        elem1.style.width = width + "%";
+        elem1.innerHTML = width  + "%";
+
+        elem2.style.width = width + "%";
+        elem2.innerHTML = width  + "%";
+
+        elem3.style.width = width + "%";
+        elem3.innerHTML = width  + "%";
+
+        elem4.style.width = width + "%";
+        elem4.innerHTML = width  + "%";
+
+        elem5.style.width = width + "%";
+        elem5.innerHTML = width  + "%";
+      }
+    }
+  }
+
+}
+
+</script>
+<title>Progress Bar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body>
+
+<div class="w3-container">
+  <h2>Rounded Progress Bars</h2>
+  <p>Use any of the <strong>w3-round</strong> classes to add rounded corners to progress bars:</p>
+
+  <div class="w3-light-grey w3-round-xlarge">
+    <div id="greenpb" class="w3-container w3-green w3-round-xlarge progressbar" style="width:50%;text-align:right;color:#6A6A6A !important;">50%</div>
+  </div>
+<br/>
+  <div class="w3-light-grey w3-round-xlarge">
+    <div id="redpb" class="w3-container w3-red w3-round-xlarge progressbar" style="width:50%;text-align:right;color:#6A6A6A !important;">50%</div>
+  </div>
+  <br/>
+  <div class="w3-light-grey w3-round-xlarge w3-border-grey">
+    <div id="whitepb" class="w3-container w3-white w3-border-grey w3-round-xlarge progressbar" style="width:50%;text-align:right;color:#6A6A6A">50%</div>
+  </div>
+  <br/>
+  <div class="w3-light-grey w3-round-xlarge">
+    <div id="bluepb" class="w3-container w3-blue w3-round-xlarge progressbar" style="width:50%;text-align:right;color:#6A6A6A !important;">50%</div>
+  </div>
+  <br/>
+  <div class="w3-light-grey w3-round-xlarge">
+    <div id="yellowpb" class="w3-container w3-yellow w3-round-xlarge progressbar" style="width:50%;text-align:right;color:#6A6A6A !important;">50%</div>
+  </div>
+
+ 
+</div>
+<br/>
+<button id="add"  onclick="btnfinish()">Finish</button>
+
+</body>
+</html>
